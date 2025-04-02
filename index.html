@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js" ></script>
     <title>Dynamic blog</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+          <ul>
+            <li><a><b>Home</b></a></li>
+            <li><a id="highlight" href="post.html">All Posts</a></li>
+            <li><a id="highlight" href="new-post.html">New Post</a></li>
+          </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>All Blog Posts</h1>
+        <div id="posts-container" class="posts-grid">
+          <!-- Posts will be loaded here by JavaScript -->
+        </div>
+    </main>
+      
 </body>
 </html>
