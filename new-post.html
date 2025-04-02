@@ -19,7 +19,7 @@
         </nav>
     </header>
 
-    <form action="/index.html" method="POST">
+    <form id="article" name="article" action="index.html" onsubmit="return validateForm()" method="POST" >
         <div class="form-group">
             <label for="title">Title</label>
             <input type="text" id="title" name="title" required>
