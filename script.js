@@ -5,7 +5,6 @@ function validateForm() {
     let title = document.getElementById("title").value.trim();
     let content = document.getElementById("content").value.trim();
     let author = document.getElementById("author").value.trim();
-    let tags = document.getElementById("tags").value.trim();
     let imageUrl = document.getElementById("imageUrl").value.trim();
 
     if (title === "" || content === "" || author === "" || tags === "" || imageUrl === "") {
@@ -31,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 title: document.getElementById("title").value.trim(),
                 content: document.getElementById("content").value.trim(),
                 author: document.getElementById("author").value.trim(),
-                tags: document.getElementById("tags").value.trim(),
                 imageUrl: document.getElementById("imageUrl").value.trim()
             };
 
@@ -52,8 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="post">
                 <h3>${post.title}</h3>
                 <p><strong>Author:</strong> ${post.author}</p>
-                <p><strong>Tags:</strong> ${post.tags}</p>
-                <p>${post.content}</p>
+                <p><strong>Content:</strong>${post.content}</p>
                 ${post.imageUrl ? `<img src="${post.imageUrl}" alt="Post Image" style="max-width:300px;">` : ""}
             </div>
         `;
