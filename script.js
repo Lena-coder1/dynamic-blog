@@ -5,9 +5,9 @@ function validateForm() {
     let title = document.getElementById("title").value.trim();
     let content = document.getElementById("content").value.trim();
     let author = document.getElementById("author").value.trim();
-    let imageUrl = document.getElementById("imageUrl").value.trim();
+    let imageUrl = document.getElementById("imageUrl").value;
 
-    if (title === "" || content === "" || author === "" || tags === "" || imageUrl === "") {
+    if (title === "" || content === "" || author === "" || imageUrl === "") {
         alert("Please fill in all required fields.");
         return false;
     }
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = "index.html"; 
         });
     } else {
-        console.error("Form not found. Check the form ID.");
+        console.error("Form not found.");
     }
 });
 
@@ -68,3 +68,29 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+// deleting a post form the local storage 
+
+function deletePost() {
+    localStorage.removeItem("newPost"); 
+    alert("Post deleted.");
+    window.location.reload(); 
+}
+
+// editing a post form the local storage 
+
+function editPost() {
+    let post = JSON.parse(localStorage.getItem("newPost")); 
+
+    if (post) {
+        
+        document.getElementById("title").value = post.title;
+        document.getElementById("content").value = post.content;
+        document.getElementById("author").value = post.author;
+        document.getElementById("imageUrl").value = post.imageUrl;
+
+        alert("You can now edit the post details.");
+    } else {
+        alert("No post found to edit.");
+    }
+}

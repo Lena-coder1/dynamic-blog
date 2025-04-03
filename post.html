@@ -13,7 +13,7 @@
         <nav>
           <ul>
             <li><a id="highlight" href="index.html">Home</a></li>
-            <li><a><b>All Posts</b></a></li>
+            <li><a><b>Post</b></a></li>
             <li><a id="highlight" href="new-post.html">New Post</a></li>
           </ul>
         </nav>
@@ -21,18 +21,19 @@
 
     <main>
         <article id="post-container" class="post-full">
-          <!-- Post content will be loaded here by JavaScript -->
+          <div id="postDisplay"></div>
+          
         </article>
         <div id="message" class="alert" style="display: none;"></div>
         <div class="actions">
           <a href="index.html" class="btn back">Back to All Posts</a>
-          <button id="edit-btn" class="btn edit">Edit</button>
-          <button id="delete-btn" class="btn delete">Delete</button>
+          <button id="edit-btn" class="btn edit" onclick="editPost()">Edit</button>
+          <button id="delete-btn" class="btn delete" onclick="deletePost()">Delete</button>
         </div>
     </main>
 
   <footer>
-      <p>&copy; 2023 Blog Website. All rights reserved.</p>
+      <p>&copy; 2025 Blog Website. All rights reserved.</p>
   </footer>
 </body>
 </html>
